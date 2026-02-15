@@ -1,5 +1,5 @@
 //
-//  Home.swift
+//  Media.swift
 //  AppleMusicClone
 //
 //  Created by Artem Golovchenko on 15.02.2026.
@@ -7,21 +7,25 @@
 
 import SwiftUI
 
-struct Home: View {
+struct Media: View {
     
-    @State var offset: CGFloat = 0
     @State var hideHeader: Bool = false
     
     var body: some View {
         NavigationStack {
             ZStack(alignment: .top) {
                 List {
-                    ForEach(0..<50) { _ in
+                    ForEach(0..<6) { _ in
                         HStack {
-                            Image(systemName: "house")
-                            
+                            Image(systemName: "note")
                             Text("Hello")
-                                .frame(maxWidth: .infinity)
+                        }
+                    }
+                    .listRowSeparator(.visible, edges: .bottom)
+                    
+                    LazyVGrid(columns: [GridItem(), GridItem()]) {
+                        ForEach(0..<10) { _ in
+                            Text("Grid Item")
                         }
                     }
                     .listRowSeparator(.hidden)
@@ -40,12 +44,13 @@ struct Home: View {
                     }
                 }
                 
-                Header(title: "Home", animate: hideHeader)
+                Header(title: "Media", animate: hideHeader)
             }
         }
     }
 }
 
 #Preview {
-    ContentView()
+    Media()
+        .preferredColorScheme(.dark)
 }
