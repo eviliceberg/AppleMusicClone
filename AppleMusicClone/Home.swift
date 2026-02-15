@@ -17,14 +17,10 @@ struct Home: View {
             ZStack(alignment: .top) {
                 List {
                     ForEach(0..<50) { _ in
-                        HStack {
-                            Image(systemName: "house")
-                            
-                            Text("Hello")
-                                .frame(maxWidth: .infinity)
-                                .background(.red)
-                                .listRowSeparator(.hidden)
-                        }
+                        Text("Hello")
+                            .frame(maxWidth: .infinity)
+                            .background(.red)
+                            .listRowSeparator(.hidden)
                     }
                 }
                 .safeAreaInset(edge: .top, content: {
