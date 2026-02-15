@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct AppleMusicCloneApp: App {
+    
+    @StateObject var globalState: GlobalState = GlobalState()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(globalState)
         }
     }
 }

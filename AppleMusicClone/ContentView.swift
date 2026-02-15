@@ -13,7 +13,7 @@ struct ContentView: View {
             Tab("Home", systemImage: "house.fill") {
                 Home()
             }
-            Tab("Home", systemImage: "square.grid.2x2.fill") {
+            Tab("New", systemImage: "square.grid.2x2.fill") {
                 VStack {
                     Image(systemName: "square.grid.2x2.fill")
                         .imageScale(.large)
@@ -22,7 +22,7 @@ struct ContentView: View {
                 }
                 .padding()
             }
-            Tab("Home", systemImage: "dot.radiowaves.left.and.right") {
+            Tab("Radio", systemImage: "dot.radiowaves.left.and.right") {
                 VStack {
                     Image(systemName: "dot.radiowaves.left.and.right")
                         .imageScale(.large)
@@ -31,14 +31,8 @@ struct ContentView: View {
                 }
                 .padding()
             }
-            Tab("Home", systemImage: "music.note.square.stack.fill") {
-                VStack {
-                    Image(systemName: "music.note.square.stack.fill")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
-                    Text("Hello, world!")
-                }
-                .padding()
+            Tab("Media", systemImage: "music.note.square.stack.fill") {
+                Media()
             }
             Tab(role: .search) {
                 EmptyView()
