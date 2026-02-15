@@ -8,21 +8,27 @@
 import SwiftUI
 
 struct Header: View {
-    
+
     let title: String
     var animate: Bool
-    
+
     var body: some View {
         VStack {
             HStack {
                 Text(title)
                     .font(.title)
                     .fontWeight(.bold)
-                
+
                 Spacer()
-                
+
+            #if DEBUG
+                Text("Dev Mode")
+                    .fontWeight(.bold)
+                    .foregroundStyle(.green)
+            #endif
+
                 Button {
-                    
+
                 } label: {
                     Circle()
                         .fill(.white)

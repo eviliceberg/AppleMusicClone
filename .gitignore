@@ -1,0 +1,8 @@
+
+build/
+DerivedData/
+
+xcuserdata/
+xcdebugger/
+*.xcdebugger
+*.xcuserstate

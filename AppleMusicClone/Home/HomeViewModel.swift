@@ -11,15 +11,15 @@ import Combine
 @MainActor
 final class HomeViewModel: ObservableObject {
     @Published var data: [String] = []
-    
+
     enum Operation: String {
         case plus, minus, divide, multiply
     }
-    
+
     func fetchData() async {
-        
+
     }
-    
+
     func calculator(num1: Double, num2: Double, operation: Operation) -> Double {
         switch operation {
         case .plus:

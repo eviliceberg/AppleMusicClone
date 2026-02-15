@@ -106,6 +106,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F47C0B4B2F427AC100C71BB6 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				F4FA4A342F422B840060BF34 /* AppleMusicClone */,
@@ -195,6 +196,9 @@
 			);
 			mainGroup = F4FA4A292F422B840060BF34;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F47C0B492F427A9600C71BB6 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F4FA4A332F422B840060BF34 /* Products */;
 			projectDirPath = "";
@@ -256,6 +260,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F47C0B4B2F427AC100C71BB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = F47C0B4A2F427AC100C71BB6 /* SwiftLintBuildToolPlugin */;
+		};
 		F4FA4A412F422B850060BF34 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F4FA4A312F422B840060BF34 /* AppleMusicClone */;
@@ -578,6 +586,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F47C0B492F427A9600C71BB6 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.63.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F47C0B4A2F427AC100C71BB6 /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F47C0B492F427A9600C71BB6 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F4FA4A2A2F422B840060BF34 /* Project object */;
 }

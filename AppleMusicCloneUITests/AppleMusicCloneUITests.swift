@@ -22,7 +22,7 @@ final class AppleMusicCloneUITests: XCTestCase {
         homeTab.tap()
 
         let homeHeader = app.staticTexts["Home"]
-        
+
         if homeHeader.waitForExistence(timeout: 2) {
              XCTAssertTrue(homeHeader.exists, "Заголовок 'Home' має відображатися на першому екрані")
         }
@@ -30,13 +30,13 @@ final class AppleMusicCloneUITests: XCTestCase {
         let mediaTab = app.tabBars.buttons.element(boundBy: 3)
         XCTAssertTrue(mediaTab.exists, "Таб Media має існувати")
         mediaTab.tap()
-        
+
         let mediaHeader = app.staticTexts["Media"]
-        
+
         if mediaHeader.waitForExistence(timeout: 2) {
              XCTAssertTrue(mediaHeader.exists, "Заголовок 'Media' має відображатися після переходу на вкладку")
         }
-        
+
         let gridItem = app.staticTexts["Grid Item"].firstMatch
         XCTAssertTrue(gridItem.exists, "Елементи сітки мають бути видимі на екрані Media")
     }
