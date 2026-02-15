@@ -9,12 +9,13 @@ import SwiftUI
 
 struct Header: View {
     
+    let title: String
     var animate: Bool
     
     var body: some View {
         VStack {
             HStack {
-                Text("Home")
+                Text(title)
                     .font(.title)
                     .fontWeight(.bold)
                 
@@ -36,5 +37,5 @@ struct Header: View {
 }
 
 #Preview {
-    Header(animate: true)
+    Header(title: "Home", animate: true)
 }
